@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">What is the reason for refusal?</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/afn-refusal-decision" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason"
+                name="refusal-reason"
+                type="radio"
+                value="no-business-need"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason"
+              >
+                No business need
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-2"
+                name="refusal-reason"
+                type="radio"
+                value="no-right-to-work"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-2"
+              >
+                No right to work
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-3"
+                name="refusal-reason"
+                type="radio"
+                value="no-right-to-reside"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-3"
+              >
+                No right to reside
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-4"
+                name="refusal-reason"
+                type="radio"
+                value="unable-to-prove-identity"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-4"
+              >
+                Unable to prove identity
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-5"
+                name="refusal-reason"
+                type="radio"
+                value="failure-to-respond"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-5"
+              >
+                Failure to respond
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Next</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

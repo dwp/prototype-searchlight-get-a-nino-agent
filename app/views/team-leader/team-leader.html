@@ -1,0 +1,201 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance number –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+            <ul class="moj-sub-navigation__list">
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link" aria-current="page" href="./team-leader.html" onclick="hideDiv()">Staff actions</a>
+              </li>
+          
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link" href="./reporting.html">Reporting</a>
+              </li>
+          
+            </ul>
+          
+          </nav>
+          <div class="govuk-grid-column-two-thirds">
+              <h3 class="govuk-heading-l">View staff actions</h3>
+            </div> 
+        </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <div class="govuk-form-group">
+                <p>
+                    Staff ID
+                </p>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+              </div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <p>
+                      From
+                    </p>
+                  <div class="govuk-date-input" id="passport-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <div class="govuk-date-input" id="passport-issued">
+                      <p>
+                       To
+                      </p>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button class="govuk-button" data-module="govuk-button">
+                Search
+              </button>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-s">Staff ID: 12345678</h3>
+            <div style="display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            justify-content: space-between;
+            width:100%">
+                <p >27/02/2022 - 05/04/2022. 14 actions.</p> 
+                <span> <a href="#">
+                    Export to .csv file
+                </a></span>           
+            </div>
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <ul class="govuk-tabs__list">
+                  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#past-day">
+                      ID checks (3)
+                    </a>
+                  </li>
+                  <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#past-week">
+                      Decisions made (9)
+                    </a>
+                  </li>
+                  <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#past-month">
+                      Further information (1)
+                    </a>
+                  </li>
+                </ul>
+                <div class="govuk-tabs__panel" id="past-day">
+                  <h5 class="govuk-heading-s">Application reference number</h5>
+                  <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C12347123</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">B68192371</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">B12348293</a></td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+                    <h5 class="govuk-heading-s">Application reference number</h5>
+                  <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C12347123</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C02182714</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C71923013</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C89239034</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C23423433</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C71923234</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C71323438</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C52343013</a></td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+                    <h5 class="govuk-heading-s">Application reference number</h5>
+                  <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell"><a href="../AfN/identity-verification/view-application-identity-verified.html">C12347123</a></td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
+        </div>
+      </div>
+  </div>
+
+  <script>
+      function hideDiv() {
+          document.getElementById('staff-actions').style.display = 'none'
+      }
+  </script>
+{% endblock %}

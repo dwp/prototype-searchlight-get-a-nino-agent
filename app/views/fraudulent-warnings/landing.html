@@ -1,0 +1,25 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Home – {{serviceName}} –
+GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+    <a href="./previous-applications-mvp.html" class="govuk-heading-m govuk-link">MVP</a>
+    <br/>
+    <a href="./previous-applications-similar-attribute.html" class="govuk-heading-m govuk-link">Display Similarity</a>
+    <br/>
+    <a href="previous-applications-compare-ticks.html" class="govuk-heading-m govuk-link">Display Compared Ticks</a>
+    <br/>
+    <a href="previous-applications-compare-similarities.html" class="govuk-heading-m govuk-link">Display Compared Information</a>
+    <br/>
+    <a href="previous-applications-compare-tags.html" class="govuk-heading-m govuk-link">Display Compared Tags</a>
+    <br/>
+    <a href="previous-applications-compare-match-no-match.html" class="govuk-heading-m govuk-link">Display Compared No Tags</a>
+    <br/>
+    <a href="./previous-applications-filters.html" class="govuk-heading-m govuk-link">Display Adjustable Table</a>
+  </div>
+</div>
+
+{% endblock %}

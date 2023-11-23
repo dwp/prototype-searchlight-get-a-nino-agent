@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">What is the reason for refusal?</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/no-nino-decision" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason"
+                name="refusal-reason"
+                type="radio"
+                value="potential-trace-found"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason"
+              >
+                Potential trace found
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-2"
+                name="refusal-reason"
+                type="radio"
+                value="deceased"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-2"
+              >
+                Deceased
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-3"
+                name="refusal-reason"
+                type="radio"
+                value="invalid-visa"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-3"
+              >
+                Invalid visa
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-3"
+                name="refusal-reason"
+                type="radio"
+                value="under-16"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-3"
+              >
+                Under 16
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-3"
+                name="refusal-reason"
+                type="radio"
+                value="potential-fraud"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-3"
+              >
+                Potential fraud
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="refusal-reason-3"
+                name="refusal-reason"
+                type="radio"
+                value="channel-islands"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="refusal-reason-3"
+              >
+                Channel Islands address
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Next</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

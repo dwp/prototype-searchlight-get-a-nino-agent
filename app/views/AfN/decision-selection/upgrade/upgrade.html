@@ -1,0 +1,24 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">Confirm the upgraded account</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-inset-text"><strong>QQ 12 34 56 C </strong></div>
+    <p>
+      A letter will automatically be sent to Jane Doe to confirm
+      we've traced their existing National Insurance number.
+    </p>
+    <br />
+    <form action="/confirm-decision" method="post" novalidate>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Confirm and close
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

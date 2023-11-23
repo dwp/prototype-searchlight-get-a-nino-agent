@@ -1,0 +1,208 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance number –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">National Insurance number application</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/search-reference-number-select" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which reference number do you have?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reference-number"
+                name="reference-number"
+                type="radio"
+                value="application"
+                data-aria-controls="conditional-reference-number"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reference-number"
+              >
+                Application
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional"
+              id="conditional-reference-number"
+            >
+              <div class="govuk-form-group ">
+                <label class="govuk-label" for="reference-number">
+                  Application reference number
+                </label>
+               
+                <input
+                  class="govuk-input govuk-!-width-one-half "
+                  id="application-reference"
+                  name="application-reference"
+                  type="application"
+                  spellcheck="false"
+                  aria-describedby="application-reference-error"
+                  autocomplete="application"
+                />
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reference-number"
+                name="reference-number"
+                type="radio"
+                value="passport"
+                data-aria-controls="conditional-reference-number1"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reference-number"
+              >
+                Passport
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional"
+              id="conditional-reference-number1"
+            >
+              <div class="govuk-form-group ">
+                <label class="govuk-label" for="reference-number">
+                  Passport number
+                </label>
+              
+                <input
+                  class="govuk-input govuk-!-width-one-half "
+                  id="application-reference"
+                  name="application-reference"
+                  type="application"
+                  spellcheck="false"
+                  aria-describedby=""
+                  autocomplete="application"
+                />
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reference-number"
+                name="reference-number"
+                type="radio"
+                value="brp"
+                data-aria-controls="conditional-reference-number2"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reference-number"
+              >
+                BRP
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional"
+              id="conditional-reference-number2"
+            >
+              <div class="govuk-form-group ">
+                <label class="govuk-label" for="reference-number">
+                  BRP number
+                </label>
+               
+                <input
+                  class="govuk-input govuk-!-width-one-half "
+                  id="application-reference"
+                  name="application-reference"
+                  type="application"
+                  spellcheck="false"
+                  aria-describedby="application-reference-error"
+                  autocomplete="application"
+                />
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reference-number"
+                name="reference-number"
+                type="radio"
+                value="national-identity-card"
+                data-aria-controls="conditional-reference-number3"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reference-number"
+              >
+                National Identity card
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional"
+              id="conditional-reference-number3"
+            >
+              <div class="govuk-form-group ">
+                <label class="govuk-label" for="reference-number">
+                  National Identity card number
+                </label>
+                
+                <input
+                  class="govuk-input govuk-!-width-one-half "
+                  id="application-reference"
+                  name="application-reference"
+                  type="application"
+                  spellcheck="false"
+                  aria-describedby="application-reference-error"
+                  autocomplete="application"
+                />
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input
+                  class="govuk-radios__input"
+                  id="reference-number"
+                  name="reference-number"
+                  type="radio"
+                  value="home-office"
+                  data-aria-controls="conditional-reference-number5"
+                />
+                <label
+                  class="govuk-label govuk-radios__label"
+                  for="reference-number"
+                >
+                  Home Office unique ID
+                </label>
+              </div>
+              <div
+                class="govuk-radios__conditional"
+                id="conditional-reference-number5"
+              >
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="reference-number">
+                    Home Office unique ID
+                  </label>
+                  <input
+                    class="govuk-input govuk-!-width-one-half"
+                    id="home-office-reference"
+                    name="home-office-reference"
+                    type="home-office"
+                    spellcheck="false"
+                    aria-describedby="home-office-reference-error"
+                    autocomplete="home-office"
+                  />
+                </div>
+              </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">Next</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

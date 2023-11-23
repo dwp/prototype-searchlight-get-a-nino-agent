@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">Match found for Jane Doe</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      You need to upgrade this match using the National Insurance number displayed below. 
+      Click <strong>Next</strong> when you have done this.
+    </p>
+    <br />
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">First names</dt>
+          <dd class="govuk-summary-list__value">Jane</dd>
+         
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Last name</dt>
+          <dd class="govuk-summary-list__value">Doe</dd>
+          
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">National Insurance number</dt>
+          <dd class="govuk-summary-list__value">QQ 12 34 56 C</dd>
+        
+        </div>
+    </dl>
+    <br/>
+    <form action="/upgrade-needed-decision" method="post" novalidate>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

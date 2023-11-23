@@ -1,0 +1,17 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Home – {{serviceName}} –
+GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+    <a href="/start" class="govuk-heading-m govuk-link">Apply for National Insurance number</a>
+    <br/>
+    <a href="/team-leader/team-leader" class="govuk-heading-m govuk-link">Team Leader Service</a>
+    <br/>
+    <a href="./fraudulent-warnings/landing.html" class="govuk-heading-m govuk-link">Similar Applications Designs</a>
+  </div>
+</div>
+
+{% endblock %}

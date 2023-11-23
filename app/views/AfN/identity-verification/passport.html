@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+content %}
+
+<div style="display: flex; justify-content: center; flex-direction: column">
+  <div style="display: flex; justify-content: center">
+    <img
+      src="/public/images/passport-example.png"
+      style="height: 40rem; border: 0"
+    />
+  </div>
+  <div style="display: flex; justify-content: center">
+    <div class="govuk-button-group">
+      <a href="./passport-copy-2.html">
+        <button
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+        >
+          Rotate anticlockwise
+
+        </button>
+      </a>
+      <br />
+      <a href="./passport-copy.html">
+        <button
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+        >
+          Rotate clockwise
+
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

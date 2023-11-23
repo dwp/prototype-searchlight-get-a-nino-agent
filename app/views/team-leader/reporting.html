@@ -1,0 +1,117 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance number –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+            <ul class="moj-sub-navigation__list">
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link" href="./team-leader.html">Staff actions</a>
+              </li>
+          
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link"  aria-current="page" href="./reporting.html">Reporting</a>
+              </li>
+          
+            </ul>
+          
+          </nav>
+          <div class="govuk-grid-column-two-thirds">
+              <h3 class="govuk-heading-l">Download applications by date created</h3>
+              <p class="govuk-body">
+                This lists by reference number, the department, ID verification route, type of application, decision made result, reason for refusal (if relevant) and timestamps for creation, ID check and decision made.
+              </p>
+              <p class="govuk-body">
+                By default, this is for 1 month up to today – but you can alter these dates to a maximum range of 3 months.  Please note that some records are removed after 14 months
+              </p>
+            </div> 
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <p>
+                      Applications created from
+                    </p>
+                  <div class="govuk-date-input" id="passport-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <p>
+                      Applications created to
+                    </p>
+                  <div class="govuk-date-input" id="passport-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button class="govuk-button" data-module="govuk-button">
+                Download to .csv file
+              </button>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            
+        </div>
+      </div>
+  </div>
+
+  <script>
+      function hideDiv() {
+          document.getElementById('staff-actions').style.display = 'none'
+      }
+  </script>
+{% endblock %}

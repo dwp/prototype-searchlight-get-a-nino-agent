@@ -1,0 +1,123 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="../../start.html">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">National Insurance number application</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/nino-application-type-select" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">Select type of application</h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="type-of-application"
+                name="type-of-application"
+                type="radio"
+                value="work"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="type-of-application"
+              >
+                Work
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="type-of-application-2"
+                name="type-of-application"
+                type="radio"
+                value="benefits"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="type-of-application-2"
+              >
+                Benefits
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="type-of-application-3"
+                name="type-of-application"
+                type="radio"
+                value="student-loans"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="type-of-application-3"
+              >
+                Student loans
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="type-of-application-4"
+                name="type-of-application"
+                type="radio"
+                value="emergency"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="type-of-application-4"
+              >
+                Emergency
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="type-of-application-4"
+                name="type-of-application"
+                type="radio"
+                value="prevention"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="type-of-application-4"
+              >
+                Validate
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="type-of-application-4"
+                name="type-of-application"
+                type="radio"
+                value="home-office"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="type-of-application-4"
+              >
+                Home Office
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Next</button>
+    </form>
+    <br />
+    <a
+      href="../application-selection/application-search.html"
+      class="govuk-link"
+      >Search for NINo application</a
+    >
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  National Insurance number – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Check applications with matching information</h1>
+      <p class="govuk-body">There are 6 other applications that use some or all of the same pieces of information - for example, that use the same correspondence address or phone number.</p>
+      <p class="govuk-body">Check these applications before you continue. Bear in mind that these may be applications for more than one person.</p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Application reference number</th>
+            <th class="govuk-table__header" scope="col">Date submitted</th>
+            <th class="govuk-table__header" scope="col">Decision made</th>
+            <th class="govuk-table__header" scope="col">Full name</th>
+            <th class="govuk-table__header" scope="col">Correspondence address</th>
+            <th class="govuk-table__header" scope="col">Address</th>
+            <th class="govuk-table__header" scope="col">Phone number</th>
+            <th class="govuk-table__header" scope="col">Email address</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+​
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html" target="_blank">B3829328</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            <td class="govuk-table__cell govuk-!-text-align-left">Jo...gs</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Se...et <br/> SW...1D</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Lo...et<br/> SW...1D</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">...946</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">jo...om</td>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1947138</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">12 Oct 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--green">Upgraded</strong>
+              <td class="govuk-table__cell govuk-!-text-align-left">Jo...gs</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Se...et <br/> SW...1D</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Lo...et<br/> SW...1D</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">...946</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">jo...om</td>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1293356</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">30 Aug 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--green">Traced</strong>
+              <td class="govuk-table__cell govuk-!-text-align-left">Jo...gs</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Se...et <br/> SW...1D</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Lo...et<br/> SW...1D</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">...946</td>
+            <td class="govuk-table__cell govuk-!-text-align-left">jo...om</td>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B8493342</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">01 Jul 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--green">Allocated</strong>
+              <td class="govuk-table__cell govuk-!-text-align-left">Jo...gs</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Se...et <br/> SW...1D</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Lo...et<br/> SW...1D</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">...946</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">jo...om</td>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1209367</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">27 Sep 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--orange">Withdrawn</strong>
+              <td class="govuk-table__cell govuk-!-text-align-left">Ka...gs</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Se...et <br/> SW...1D</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">N/A</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">...123</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">jo...om</td>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1234524</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">21 Jun 2021</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--red">Refused</strong>
+              <td class="govuk-table__cell govuk-!-text-align-left">Ka...gs</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Se...et <br/> SW...1D</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">N/A</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">...123</td>
+              <td class="govuk-table__cell govuk-!-text-align-left">jo...om</td>
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+      <nav class="govuk-pagination" role="navigation" aria-label="results">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+        </div>
+      </nav>
+      <br/>
+      <br/>
+      <a href="../decision-selection/decision-select.html">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Next
+        </button>
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

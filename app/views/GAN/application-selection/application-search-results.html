@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} GOV.UK page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Request search results</h1>
+
+    <p>There are 8 requests using the passport number 44812145</p>
+
+    <p class="govuk-heading-s">Which request do you want to view?</p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Request number</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >B2345234</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >C12352789</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >D23123489</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >E23452345</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >E76456789</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >C54123789</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >B64456789</a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="../application-selection/view-application-data.html"
+              >C86362423</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

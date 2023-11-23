@@ -1,0 +1,22 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">Potential matches have been found for Jane Doe</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Use the application details to check whether Jane Doe already has a National Insurance number.
+    </p>
+    <br />
+    <form action="/fallout" method="post" novalidate>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

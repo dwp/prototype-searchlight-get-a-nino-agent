@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+    What do you need from Jane Doe?
+  </h1>
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/further-information-decision-idv" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested"
+                name="information-requested"
+                type="radio"
+                value="correct-identity-documents"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested"
+              >
+                Correct identity documents
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested-2"
+                name="information-requested"
+                type="radio"
+                value="other-documents"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested-2"
+              >
+                Other documents
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested-3"
+                name="information-requested"
+                type="radio"
+                value="new-immigration-status-share-code"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested-3"
+              >
+                New immigration status share code
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested-3"
+                name="information-requested"
+                type="radio"
+                value="answers-to-knowledge-based-questions"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested-3"
+              >
+                Answers to knowledge-based questions
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested-3"
+                name="information-requested"
+                type="radio"
+                value="proof-of-right-to-work"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested-3"
+              >
+                Proof of right to work
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested-3"
+                name="information-requested"
+                type="radio"
+                value="proof-of-right-to-reside"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested-3"
+              >
+                Proof of right to reside
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="information-requested-3"
+                name="information-requested"
+                type="radio"
+                value="information-to-resolve-possible-trace"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="information-requested-3"
+              >
+                Information to resolve possible trace
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Next</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

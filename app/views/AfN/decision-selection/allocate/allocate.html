@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Confirm allocation</h1>
+
+    <p>
+      A new account for Jane Doe will automatically be created on
+      CIS and eNIRS.
+    </p>
+    <p>
+      A letter will automatically be sent to Jane Doe to give them
+      their National Insurance number.
+    </p>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        This applicant has requested letters in large print. Arrange for this to
+        be sent now.
+      </strong>
+    </div>
+    <br />
+    <form action="/confirm-decision" method="post" novalidate>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Confirm and close
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

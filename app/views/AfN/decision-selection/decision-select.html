@@ -1,0 +1,160 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<br/>
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+    What is your decision about the application for Jane Doe?
+  </h1>
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/afn-decision-selected" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+              class="govuk-radios__input"
+              id="decision-type"
+              name="decision-type"
+              type="radio"
+              value="allocate"
+              />
+              <label
+              class="govuk-label govuk-radios__label"
+              for="decision-type"
+              >
+              Allocate
+            </label>
+          </div>
+          
+          <div class="govuk-radios__item">
+            <input
+            class="govuk-radios__input"
+            id="decision-type-2"
+            name="decision-type"
+            type="radio"
+            value="traced"
+            data-aria-controls="traced-decision"
+            />
+            <label
+            class="govuk-label govuk-radios__label"
+            for="decision-type-2"
+            >
+            Traced
+          </label>
+        </div>
+        <div class="govuk-radios__conditional" id="traced-decision">
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="reference-number">
+              What is the National Insurance number?
+            </label>
+            <p id="traced-decision-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>
+              National Insurance number cannot be blank
+            </p>
+            <input
+            class="govuk-input govuk-!-width-one-half govuk-input--error"
+            id="traced-decision"
+            name="traced-decision"
+            type="traced"
+            spellcheck="false"
+            aria-describedby="traced-decision-error"
+            autocomplete="application"
+            />
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input
+          class="govuk-radios__input"
+          id="decision-type-3"
+          name="decision-type"
+          type="radio"
+          value="upgraded"
+          data-aria-controls="upgraded-decision"
+          />
+          <label
+          class="govuk-label govuk-radios__label"
+          for="decision-type-3"
+          >
+          Upgraded
+        </label>
+      </div>
+      <div class="govuk-radios__conditional" id="upgraded-decision">
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="reference-number">
+            What is the National Insurance number?
+          </label>
+          <p id="upgraded-decision-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>
+            National Insurance number cannot be blank
+          </p>
+          <input
+          class="govuk-input govuk-!-width-one-half govuk-input--error"
+          id="upgraded-decision"
+          name="upgraded-decision"
+          type="traced"
+          spellcheck="false"
+          aria-describedby="upgraded-decision-error"
+          autocomplete="application"
+          />
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input
+        class="govuk-radios__input"
+        id="decision-type-4"
+        name="decision-type"
+        type="radio"
+        value="no-nino"
+        />
+        <label
+        class="govuk-label govuk-radios__label"
+        for="decision-type-4"
+        >
+        Refused
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input
+      class="govuk-radios__input"
+      id="decision-type-4"
+      name="decision-type"
+      type="radio"
+      value="withdraw"
+      />
+      <label
+      class="govuk-label govuk-radios__label"
+      for="decision-type-4"
+      >
+      Withdraw
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input
+    class="govuk-radios__input"
+    id="decision-type-4"
+    name="decision-type"
+    type="radio"
+    value="further-information"
+    />
+    <label
+    class="govuk-label govuk-radios__label"
+    for="decision-type-4"
+    >
+    Request further information
+  </label>
+  </div>
+</div>
+</fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Next</button>
+
+</form>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+numbers template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {%
+block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Case details</h1>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Case number B10010010</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">First names</dt>
+        <dd class="govuk-summary-list__value">Jane</dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> first name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Last name</dt>
+        <dd class="govuk-summary-list__value">Doe</dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> last name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Date of birth</dt>
+        <dd class="govuk-summary-list__value">1 January 1997</dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Address</dt>
+        <dd class="govuk-summary-list__value">
+          <p>72 Guild Street, <br />London, <br />SE23 6FH</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> contact information</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Other addresses</dt>
+        <dd class="govuk-summary-list__value">
+          <p>123 London Road,<br />London, <br />S1 87G</p>
+          <br />
+          <p>1 Jessops Lane,<br />Edinburgh, <br />ED1 17G</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> contact information</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Sex</dt>
+        <dd class="govuk-summary-list__value">Female</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Nationality</dt>
+        <dd class="govuk-summary-list__value">Filipino</dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">UK arrival date</dt>
+        <dd class="govuk-summary-list__value">
+          <p>10 May 2005</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> uk arrival date</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Email</dt>
+        <dd class="govuk-summary-list__value">
+          <p>mariasantos@gmail.com</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Telephone</dt>
+        <dd class="govuk-summary-list__value">
+          <p>07700 900457</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Edit
+            <span class="govuk-visually-hidden"> telephone</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <form action="/decision" method="post" novalidate>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h1 class="govuk-heading-m">Case history</h1>
+    <div class="dwp-timeline">
+      <ol class="dwp-timeline__events">
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">
+            Case postponed
+          </h2>
+          <p class="govuk-caption-m govuk-!-margin-bottom-1">Refugee</p>
+          <p class="govuk-caption-m govuk-!-margin-bottom-1">11 Aug 2021</p>
+          <p class="govuk-caption-m">by ID 123456789</p>
+        </li>
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">
+            Case submitted
+          </h2>
+          <p class="govuk-caption-m govuk-!-margin-bottom-1">10 Aug 2021</p>
+          <p class="govuk-caption-m">By Home Office</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,390 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} National Insurance
+number – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Check applications with matching information</h1>
+      <p class="govuk-body">There are 6 other applications that use some or all of the same pieces of information - for example, that use the same passport number or email address.</p>
+      <p class="govuk-body">Check these applications before you continue. Bear in mind that these may be applications for more than one person.</p>
+      </div>
+      </div>
+<div class="moj-filter-layout">
+  <div class="moj-filter-layout__content">
+    <div class="moj-filter">
+      <div class="moj-filter__header">
+        <div class="moj-filter__header-title">
+          <h2 class="govuk-heading-m">Column selection</h2>
+        </div>
+
+        <div class="moj-filter__header-action"></div>
+      </div>
+      <div class="moj-filter__content">
+        <div class="moj-filter__options">
+          <div class="flex-column" >
+          <div class="flex-row">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+                <div
+                  class="govuk-checkboxes govuk-checkboxes--small"
+                  data-module="govuk-checkboxes"
+                >
+                  <div class="govuk-checkboxes__item">
+                    <input
+                    onchange="columnToggle('email')"
+                      class="govuk-checkboxes__input"
+                      id="type"
+                      name="type"
+                      type="checkbox"
+                      value="1"
+                      checked
+                    />
+                    <label
+                      class="govuk-label govuk-checkboxes__label"
+                      for="type"
+                    >
+                      Email address
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input
+                    onchange="columnToggle('phone-number')"
+                      class="govuk-checkboxes__input"
+                      id="type-2"
+                      name="type"
+                      type="checkbox"
+                      value="2"
+
+                    />
+                    <label
+                      class="govuk-label govuk-checkboxes__label"
+                      for="type-2"
+                    >
+                      Phone number
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input
+                    onchange="columnToggle('submission')"
+                      class="govuk-checkboxes__input"
+                      id="type-2"
+                      name="type"
+                      type="checkbox"
+                      value="2"
+
+                    />
+                    <label
+                      class="govuk-label govuk-checkboxes__label"
+                      for="type-2"
+                    >
+                      Submission date
+                    </label>
+                  </div>
+
+                </div>
+            </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div
+                    class="govuk-checkboxes govuk-checkboxes--small"
+                    data-module="govuk-checkboxes"
+                  >
+
+                  <div class="govuk-checkboxes__item">
+                    <input
+                    onchange="columnToggle('home-address')"
+                      class="govuk-checkboxes__input"
+                      id="type-3"
+                      name="type"
+                      type="checkbox"
+                      value="3"
+                      checked
+                    />
+                    <label
+                      class="govuk-label govuk-checkboxes__label"
+                      for="type-3"
+                    >
+                      Address
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input
+                    onchange="columnToggle('correspondence-address')"
+                      class="govuk-checkboxes__input"
+                      id="status"
+                      name="status"
+                      type="checkbox"
+                      value="1"
+                      
+                    />
+                    <label
+                      class="govuk-label govuk-checkboxes__label"
+                      for="status"
+                    >
+                      Correspondence address
+                    </label>
+                  </div>
+                    </div>
+                </div>
+              </fieldset>
+          </div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+  
+                  <div
+                    class="govuk-checkboxes govuk-checkboxes--small"
+                    data-module="govuk-checkboxes"
+                  >
+                   
+  
+                    <div class="govuk-checkboxes__item">
+                      <input
+                      onchange="columnToggle('national-id')"
+                        class="govuk-checkboxes__input"
+                        id="status-2"
+                        name="status"
+                        type="checkbox"
+                        value="2"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-2"
+                      >
+                        National ID number
+                      </label>
+                    </div>
+  
+                    <div class="govuk-checkboxes__item">
+                      <input
+                      onchange="columnToggle('brp')"
+                        class="govuk-checkboxes__input"
+                        id="status-3"
+                        name="status"
+                        type="checkbox"
+                        value="3"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-3"
+                      >
+                        BRP number
+                      </label>
+                    </div>
+                </div>
+            </fieldset>
+          </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+          
+                          <div
+                            class="govuk-checkboxes govuk-checkboxes--small"
+                            data-module="govuk-checkboxes"
+                          >
+                    <div class="govuk-checkboxes__item">
+                      <input
+                      onchange="columnToggle('passport')"
+                        class="govuk-checkboxes__input"
+                        id="status-3"
+                        name="status"
+                        type="checkbox"
+                        value="3"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-3"
+                      >
+                        Passport number
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input
+                        onchange="columnToggle('decision-made')"
+                          class="govuk-checkboxes__input"
+                          id="status-3"
+                          name="status"
+                          type="checkbox"
+                          value="3"
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="status-3"
+                        >
+                          Decision made
+                        </label>
+                      </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <div class="moj-filter-layout__content">
+    <div class="moj-scrollable-pane" style="overflow-x: auto;">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+              Application Reference Number
+            </th>
+            <th scope="col" class="govuk-table__header">Full name</th>
+            <th scope="col" class="govuk-table__header email">Email address</th>
+            <th scope="col" class="govuk-table__header phone-number govuk-!-display-none">Phone number</th>
+            <th scope="col" class="govuk-table__header submission govuk-!-display-none">Submission date</th>
+            <th scope="col" class="govuk-table__header home-address">Address</th>
+            <th scope="col" class="govuk-table__header correspondence-address govuk-!-display-none">Correspondence address</th>
+            <th scope="col" class="govuk-table__header national-id govuk-!-display-none">National ID number</th>
+            <th scope="col" class="govuk-table__header brp govuk-!-display-none">BRP number</th>
+            <th scope="col" class="govuk-table__header passport govuk-!-display-none">Passport number</th>
+            <th scope="col" class="govuk-table__header decision-made govuk-!-display-none">Decision made</th>
+            
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+            ​
+            <tr class="govuk-table__row" style="background-color: 	#28a197;">
+              <td class="govuk-table__cell govuk-!-text-align-left"><a href="./identity-verification/view-application-identity-verified.html" target="_blank"><strong>B3829328</strong></a></td>
+              <td class="govuk-table__cell govuk-!-text-align-left"><strong>Chris Columbus</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left email"><strong>john.appleseed@blueberry.com</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left phone-number govuk-!-display-none"><strong>+4412345678</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left submission govuk-!-display-none"><strong>17 Nov 2022</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left home-address"><strong>123 OLD STREET</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left correspondence-address govuk-!-display-none"><strong>1600 PECKETT STREET</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left national-id govuk-!-display-none"><strong>12345678</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left brp govuk-!-display-none"><strong>AB4672839</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left passport govuk-!-display-none"><strong>98765432</strong></td>
+              <td class="govuk-table__cell govuk-!-text-align-left decision-made govuk-!-display-none"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-text-align-left"><a href="./identity-verification/view-application-identity-verified.html" target="_blank">B1947138</a></td>
+              <td class="govuk-table__cell govuk-!-text-align-left">Jasmine King</td>
+            <td class="govuk-table__cell govuk-!-text-align-left email">john.appleseed@blueberry.com</td>
+            <td class="govuk-table__cell govuk-!-text-align-left phone-number govuk-!-display-none">+4412345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left submission govuk-!-display-none">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left home-address">123 SESAME STREET</td>
+            <td class="govuk-table__cell govuk-!-text-align-left correspondence-address govuk-!-display-none">1600 PECKETT STREET</td>
+              <td class="govuk-table__cell govuk-!-text-align-left national-id govuk-!-display-none">12345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left brp govuk-!-display-none">AB4672839</td>
+              <td class="govuk-table__cell govuk-!-text-align-left passport govuk-!-display-none">98765432</td>
+              <td class="govuk-table__cell govuk-!-text-align-left decision-made govuk-!-display-none"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-text-align-left"><a href="./identity-verification/view-application-identity-verified.html" target="_blank">B1293356</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Alex Oldfield</td>
+            <td class="govuk-table__cell govuk-!-text-align-left email">john.appleseed@blueberry.com</td>
+            <td class="govuk-table__cell govuk-!-text-align-left phone-number govuk-!-display-none">+4412345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left submission govuk-!-display-none">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left home-address">123 OLD STREET</td>
+            <td class="govuk-table__cell govuk-!-text-align-left correspondence-address govuk-!-display-none">1600 PECKETT STREET</td>
+              <td class="govuk-table__cell govuk-!-text-align-left national-id govuk-!-display-none">12345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left brp govuk-!-display-none">AB4672839</td>
+              <td class="govuk-table__cell govuk-!-text-align-left passport govuk-!-display-none">98765432</td>
+              <td class="govuk-table__cell govuk-!-text-align-left decision-made govuk-!-display-none"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-text-align-left"><a href="./identity-verification/view-application-identity-verified.html" target="_blank">B8493342</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Alex Oldfield</td>
+            <td class="govuk-table__cell govuk-!-text-align-left email">alex.oldfield@domain.com</td>
+            <td class="govuk-table__cell govuk-!-text-align-left phone-number govuk-!-display-none">+4412345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left submission govuk-!-display-none">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left home-address">123 OLD STREET</td>
+            <td class="govuk-table__cell govuk-!-text-align-left correspondence-address govuk-!-display-none">1600 PECKETT STREET</td>
+              <td class="govuk-table__cell govuk-!-text-align-left national-id govuk-!-display-none">12345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left brp govuk-!-display-none">AB4672839</td>
+              <td class="govuk-table__cell govuk-!-text-align-left passport govuk-!-display-none">98765432</td>
+              <td class="govuk-table__cell govuk-!-text-align-left decision-made govuk-!-display-none"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-text-align-left"><a href="./identity-verification/view-application-identity-verified.html" target="_blank">B1209367</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Karen Fischer</td>
+            <td class="govuk-table__cell govuk-!-text-align-left email">karen.fischer@domain.com</td>
+            <td class="govuk-table__cell govuk-!-text-align-left phone-number govuk-!-display-none">+4412345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left submission govuk-!-display-none">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left home-address">123 LONDON STREET</td>
+            <td class="govuk-table__cell govuk-!-text-align-left correspondence-address govuk-!-display-none">1600 PECKETT STREET</td>
+              <td class="govuk-table__cell govuk-!-text-align-left national-id govuk-!-display-none">12345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left brp govuk-!-display-none">AB4672839</td>
+              <td class="govuk-table__cell govuk-!-text-align-left passport govuk-!-display-none">98765432</td>
+              <td class="govuk-table__cell govuk-!-text-align-left decision-made govuk-!-display-none"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-text-align-left"><a href="./identity-verification/view-application-identity-verified.html" target="_blank">B1234524</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">Joe Bloggs</td>
+            <td class="govuk-table__cell govuk-!-text-align-left email">person@domain.com</td>
+            <td class="govuk-table__cell govuk-!-text-align-left phone-number govuk-!-display-none">+4412345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left submission govuk-!-display-none">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left home-address">123 LONDON STREET</td>
+            <td class="govuk-table__cell govuk-!-text-align-left correspondence-address govuk-!-display-none">1600 PECKETT STREET</td>
+              <td class="govuk-table__cell govuk-!-text-align-left national-id govuk-!-display-none">12345678</td>
+              <td class="govuk-table__cell govuk-!-text-align-left brp govuk-!-display-none">AB4672839</td>
+              <td class="govuk-table__cell govuk-!-text-align-left passport govuk-!-display-none">98765432</td>
+              <td class="govuk-table__cell govuk-!-text-align-left decision-made govuk-!-display-none"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    new MOJFrontend.FilterToggleButton({
+      bigModeMediaQuery: "(min-width: 48.063em)",
+      startHidden: true,
+      toggleButton: {
+        container: $(".moj-action-bar__filter"),
+        showText: "Show filter",
+        hideText: "Hide filter",
+        classes: "govuk-button--secondary",
+      },
+      closeButton: {
+        container: $(".moj-filter__header-action"),
+        text: "Close",
+      },
+      filter: {
+        container: $(".moj-filter"),
+      },
+    });
+
+    function columnToggle(input) {
+       let arr = document.getElementsByClassName(input)
+       for (let i of arr) {
+        if (i.classList.contains('govuk-!-display-none') )
+        {
+            i.classList.remove('govuk-!-display-none')    
+        } else {
+            i.classList.add('govuk-!-display-none')
+        }
+       }
+
+    }
+  </script>
+
+  <style>
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .email .phone-number .submission .home-address .correspondence-address .national-id .brp .passport .decision-made{
+        color: #0b0c0c;
+    }
+
+    .hidden {
+        display: none;
+    }
+  </style>
+  {% endblock %}
+</div>

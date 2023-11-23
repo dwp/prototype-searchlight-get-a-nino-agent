@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  National Insurance number – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Check applications with matching information</h1>
+      <p class="govuk-body">There are 6 other applications that use some or all of the same pieces of information - for example, that use the same correspondence address or phone number.</p>
+      <p class="govuk-body">Check these applications before you continue. Bear in mind that these may be applications for more than one person.</p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Application reference number</th>
+            <th class="govuk-table__header" scope="col">Date submitted</th>
+            <th class="govuk-table__header" scope="col">Decision made</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+​
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html" target="_blank">B3829328</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">17 Nov 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1947138</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">12 Oct 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--green">Upgraded</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1293356</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">30 Aug 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--green">Traced</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B8493342</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">01 Jul 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--green">Allocated</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1209367</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">27 Sep 2022</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--orange">Withdrawn</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-text-align-left"><a href="../AfN/identity-verification/view-application-identity-verified-no-action.html"  target="_blank">B1234524</a></td>
+            <td class="govuk-table__cell govuk-!-text-align-left">21 Jun 2021</td>
+            <td class="govuk-table__cell govuk-!-text-align-left"><strong class="govuk-tag govuk-tag--red">Refused</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      <br/>
+      <a href="../decision-selection/decision-select.html">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Next
+        </button>
+      </a>
+    </div>
+  </div>
+
+{% endblock %}
